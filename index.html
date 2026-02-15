@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Helping Hands NGO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="startProgress()">
+
+<nav>
+  <a href="index.html">Home</a>
+  
+  <a href="causes.html">Causes</a>
+  <a href="impact.html">Impact</a>
+  <a href="donate.html">Donate</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</nav>
+
+<div class="hero">
+  <h1>Helping Hands NGO</h1>
+  <p>Together We Can Make a Difference</p>
+  <p>“Giving is not about wealth. It’s about the heart that chooses to help.”</p>
+  <img src="images/dp2.jpg" alt="Charity">
+
+</div>
+
+<section>
+  <h2>Donation Progress</h2>
+  <div class="progress-box">
+    <div class="progress-bar" id="bar">0%</div>
+  </div>
+</section>
+
+<section>
+  <h2>Testimonials</h2>
+  <p>"This NGO changed my village life!"</p>
+</section>
+
+<script>
+function startProgress() {
+  var bar = document.getElementById("bar");
+  var width = 0;
+
+  var move = setInterval(function () {
+    if (width >= 70) {
+      clearInterval(move);
+    } else {
+      width++;
+      bar.style.width = width + "%";
+      bar.innerHTML = width + "%";
+    }
+  }, 30);
+}
+</script>
+<footer>
+  © 2026 Helping Hands NGO | @helpinghands
+</footer>
+
+
+</body>
+</html>

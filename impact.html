@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Impact</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      text-align: center;
+      background-color: #eafaf1;
+    }
+
+    nav {
+      background-color: #9a2eaf;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px;
+    }
+    footer {
+  background-color: rgb(49, 46, 148);
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+  </style>
+</head>
+
+<body onload="showNumbers()">
+
+<nav>
+  <a href="index.html">Home</a>
+  
+  <a href="causes.html">Causes</a>
+  <a href="impact.html">Impact</a>
+  <a href="donate.html">Donate</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</nav>
+
+<section>
+  <h1>Our Impact</h1>
+  <h2 id="num1">0</h2>
+  <p>Children Helped</p>
+
+  <h2 id="num2">0</h2>
+  <p>Families Supported</p>
+</section>
+
+<script>
+function showNumbers() {
+  var n1 = 0;
+  var n2 = 0;
+
+  var count1 = setInterval(function () {
+    if (n1 >= 100) clearInterval(count1);
+    else {
+      n1++;
+      document.getElementById("num1").innerHTML = n1;
+    }
+  }, 20);
+
+  var count2 = setInterval(function () {
+    if (n2 >= 200) clearInterval(count2);
+    else {
+      n2++;
+      document.getElementById("num2").innerHTML = n2;
+    }
+  }, 20);
+}
+
+</script>
+<footer>
+    © 2026 HelpingHands | @helpinghands
+  </footer>
+</body>
+</html>
